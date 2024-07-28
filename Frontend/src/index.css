@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+body::after {
+  content: url("/src/Assets/Images/Slider/1.png") url("/src/Assets/Images/Slider/2.png")
+    url("/src/Assets/Images/Slider/3.png");
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* This styles the main scrollbar container */
+::-webkit-scrollbar {
+  width: 8px; /* width of the entire scrollbar */
+  height: 4px; /* width of the entire scrollbar */
+}
+
+/* This styles the scrollbar track (the part the thumb slides within) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* color of the tracking area */
+}
+
+/* This styles the scrollbar thumb (the draggable element) */
+::-webkit-scrollbar-thumb {
+  background: #3b8dcb; /* color of the thumb */
+  border-radius: 6px; /* roundness of the thumb */
+  transition: all 0.5s;
+}
+
+/* This changes the thumb color on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* color of the thumb on hover */
+  transition: all 0.5s;
+}
